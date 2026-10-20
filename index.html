@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b0c">
+<meta name="description" content="BG OTT — your premium cinema destination.">
+<title>BG OTT — Premium Cinema</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="BG OTT home"><span class="brand-mark">BG</span><span>OTT<span class="gold-dot">.</span></span></a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <button class="nav-link active" data-view="home">Home</button>
+    <button class="nav-link" data-view="movies">Movies</button>
+    <button class="nav-link" data-view="series">Series</button>
+    <button class="nav-link" data-view="mylist">My List</button>
+  </nav>
+  <div class="top-actions">
+    <label class="searchbox"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search titles..." aria-label="Search titles"></label>
+    <button class="avatar" id="profileButton" title="Demo profile">B</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <p class="eyebrow"><span class="live-dot"></span> BG OTT ORIGINALS</p>
+      <h1>Stories that<br><span>stay with you.</span></h1>
+      <p class="hero-copy">Discover your next favourite. A world of cinema, selected for you.</p>
+      <div class="hero-meta"><span class="gold-pill">FEATURED</span><span>2026</span><span>Action · Drama</span><span>4K UHD</span></div>
+      <div class="hero-buttons">
+        <button class="btn btn-gold" id="heroPlay">▶ &nbsp; Explore featured</button>
+        <button class="btn btn-glass" id="heroInfo">ⓘ &nbsp; More info</button>
+      </div>
+    </div>
+    <div class="hero-brand">BG<span>+</span></div>
+  </section>
+
+  <section class="content-wrap">
+    <div class="welcome-row"><div><p class="eyebrow">CURATED FOR YOU</p><h2 id="sectionHeading">Trending now</h2></div><div class="filters" id="filters"></div></div>
+    <div class="notice"><span>✦</span> Demo catalogue — add films you own or are licensed to stream.</div>
+    <div class="movie-grid" id="movieGrid" aria-live="polite"></div>
+    <div class="empty-state hidden" id="emptyState"><div class="empty-icon">⌕</div><h3>No titles found</h3><p>Try another search or category.</p></div>
+  </section>
+</main>
+
+<footer><a class="brand footer-brand" href="#"><span class="brand-mark">BG</span><span>OTT<span class="gold-dot">.</span></span></a><p>YOUR ENTERTAINMENT. YOUR WORLD.</p><small>© <span id="yearNow"></span> BG OTT. Demo starter — stream only content you are authorized to distribute.</small></footer>
+
+<div class="modal-backdrop hidden" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="detail-modal">
+    <button class="close-modal" id="closeModal" aria-label="Close">×</button>
+    <div class="modal-art" id="modalArt"><div class="modal-art-shade"></div></div>
+    <div class="modal-body"><div class="eyebrow" id="modalEyebrow">BG OTT FEATURE</div><h2 id="modalTitle"></h2><div class="modal-meta" id="modalMeta"></div><p id="modalDescription"></p>
+      <div class="modal-actions"><button class="btn btn-gold" id="playButton">▶ Play</button><button class="btn btn-glass" id="listButton">＋ My List</button></div>
+      <div class="player-wrap hidden" id="playerWrap"><video id="videoPlayer" controls playsinline></video><p id="playerMessage" class="player-message"></p></div>
+    </div>
+  </div>
+</div>
+<div class="toast hidden" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
